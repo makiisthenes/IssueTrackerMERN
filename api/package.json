@@ -1,0 +1,28 @@
+{
+  "name": "merntutorial",
+  "version": "1.0.0",
+  "description": "Issue Tracker API",
+  "main": "",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -w server js_modules/* -e js .env, graphql server.js",
+    "dbreset": "mongo issuetracker init.mongo.js"
+  },
+  "author": "Michael Peres",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-express": "^2.25.2",
+    "dotenv": "^6.2.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "graphql": "^0.13.2",
+    "mongodb": "^4.1.1",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.24.2"
+  }
+}

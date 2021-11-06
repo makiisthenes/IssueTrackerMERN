@@ -1,0 +1,59 @@
+scalar GraphQLDate
+
+type Issue{
+	_id: ID!
+	id: Int!
+	title: String!
+	status: StatusType!
+	owner: String
+	effort: Int
+	created: GraphQLDate!
+	due: GraphQLDate
+	description: String
+}
+
+
+"Toned down issue class, for input without server generated inputs such as dates etc"
+input IssueInputs {
+	"Will be main issue that comes up."
+	title: String!
+	"Optional, else set to 'New'"
+	status: StatusType = New
+	owner:String = "Anonymous"
+	# Optional, else set to 0
+	effort:Int = 0
+	due: GraphQLDate
+	description: String
+}
+
+
+
+# Enums Allow for restricted inputs for a specific label.
+enum StatusType{
+	New
+	Assigned
+	Fixed
+	Closed
+}
+
+
+# Top Level declarations
+
+type Query {
+	about: String!
+	issueList(
+		status: StatusType
+		effortMin: Int
+		effortMax: Int
+		ownerSearch: String
+	): [Issue!]!
+	issue(id: Int!): Issue!
+	ownerList: [String!]!
+}
+
+type Mutation{
+	"Allows the change of the string field of about."
+	setAboutMessage(message: String!):String
+	issueAdd(issue: IssueInputs!):Issue!
+	
+}
