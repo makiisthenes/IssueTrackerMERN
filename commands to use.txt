@@ -1,0 +1,7 @@
+cd ui
+npm run dev
+npm run compile
+npm run watch
+
+cd api
+npm run dev

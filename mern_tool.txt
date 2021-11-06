@@ -1,0 +1,5 @@
+# Lets make a tool that will first
+Go to react tutorial directory.
+run: npm run dev
+and then in another terminal run, npm run watch
+and the start a firefox instance with website, localhost:3000/index.html
