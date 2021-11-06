@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+	<meta charset="utf-8">
+	<title>Hello World [React]</title>
+	<meta name="author" content="Michael Peres">
+	<meta name="description" content="This is our hello world REACT webpage.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="index.css">	
+	<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+	<script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script> <!-- JSX to JS Compiler in browser. -->
+	
+	
+	<!-- 
+	Using NodeJS UI version of libraries and using webpack to bundle them into one js file.
+	<script src="https://unpkg.com/react@16/umd/react.development.js"></script>  <!-- React Javascript
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>  <!-- React DOM Javascript
+	<script src="https://unpkg.com/@babel/polyfill@7/dist/polyfill.min.js"></script> <!-- Implementation of new functions for older browser support. 
+	<script src="https://unpkg.com/whatwg-fetch@3.0.0/dist/fetch.umd.js"></script>
+	<!-- Polyfill for fetch api function for older browser support
+	<!-- script type="text/babel" src="/App.jsx"></script>  <!--npx babel src --presets @babel/react --out-dir public 
+	-->
+	
+	<script src="https://unpkg.com/prop-types@15/prop-types.js"></script>
+	<!-- Prop types allow classes to expect a specific type of parameter passed as a prop, just like in Java. -->
+	
+	
+</head>
+<style>
+	body{
+		background-color: white;
+	}
+	h1.title_page{
+		text-decoration: underline;
+		font-weight: 600;
+		font-family: sans-serif;
+	}
+</style>
+<body>
+	<div id="content" style="display: none;"></div>
+	<div id="root" style="display: none;"></div>
+	<div id="root1"></div>
+	
+	
+
+	
+	<!-- End of HTML content -->
+	<script type="text/javascript" src="/env.js"></script>
+	<!-- <script type="text/javascript" src="/App.js"></script> -->
+	<script type="text/javascript" src="vendor.bundle.js"></script>
+	<script type="text/javascript" src="app.bundle.js"></script> <!-- Component.js is replaced with app.bundle.js Page 209 -->
+	
+	<!-- <script type="text/javascript" src="Component.js"></script> -->
+	<script type="text/javascript" >
+		/* 
+		const element = React.createElement('div', {title:"Outer Div", id:"outer_div"},React.createElement('h1', {className:"title_page"}, "Hello World using React."))
+		ReactDOM.render(element, document.getElementById("content"));
+		*/
+	</script>
+	<!-- Babel only compiles scripts that contain the type="text/babel" in order to work -->
+	
+	
+	
+	<!-- Build Process -->
+	<script> 
+		/*
+			npx babel src --out-dir public
+			npx webpack public/Component.js --output public/app.bundle.js
+			npm run dev
+		
+		
+		
+		Use this module in the project, nice facebook loading type:
+		https://www.npmjs.com/package/react-content-loader
+		
+		*/
+	</script>
+	
+</body>
+
+</html> 

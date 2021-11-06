@@ -1,0 +1,51 @@
+{
+  "name": "merntutorial",
+  "version": "1.0.0",
+  "description": "Issue Tracker API",
+  "main": "",
+  "scripts": {
+    "start": "node uiserver.js",
+    "dev": "nodemon -w uiserver.js -e js env uiserver.js",
+    "compile": "webpack --mode production",
+    "watch": "webpack --watch"
+  },
+  "author": "Michael Peres",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "babel-polyfill": "^6.26.0",
+    "dotenv": "^6.2.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^0.21.0",
+    "i": "^0.3.7",
+    "javascript-time-ago": "^2.3.8",
+    "nodemon": "^2.0.12",
+    "npm": "^7.24.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-router-dom": "^5.3.0",
+    "react-time-ago": "^7.1.1",
+    "react-typing-effect": "^2.0.5",
+    "typing-effect-reactjs": "^1.4.1",
+    "url-search-params": "^1.1.0",
+    "whatwg-fetch": "^3.6.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "babel-loader": "^8.2.2",
+    "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.25.1",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-middleware": "^3.7.3",
+    "webpack-hot-middleware": "^2.25.1"
+  }
+}
